@@ -112,7 +112,7 @@ const squareOf5 = () => {
 
 // If only 1 line 
 const square = number => number * number;
-*/
+
 
 
 
@@ -120,3 +120,14 @@ const colors = ["red", "green", "blue"];
 let items = colors.map(color => `<li>${color}</li>`);
 
 console.log(items);
+
+*/
+var user = {
+  name: "Labeeu",
+  firstname: "Christophe",
+  age: 30
+};
+
+var name = user.name;
+var firstname = user.firstname;
+var age = user.age;
