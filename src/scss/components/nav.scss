@@ -1,26 +1,20 @@
-
-//Navigation component
-
-.c-nav{
-    background-color: $primary-gray;
+// Navigation Component
+.c-nav {
+    background-color: $primary-grey;
     color: $primary-black;
-    //border-radius: 10px;
-}
 
-.c-nav-list{
-    list-style: none;
-    display: flex;
-}
+    .c-nav-list {
+        list-style: none;
 
-.c-nav-list-item{
-    padding: 10px;
+        display: flex;
 
-    &:hover{
-        background-color: $primary-white;
-        cursor: pointer;
+        .c-nav-list-item {
+            padding: 10px;
+
+            &:hover {
+                background-color: $primary-white;
+                cursor: pointer;
+            }
+        }
     }
-}
-
-.c-nav-list-item:hover{
-    background-color: $primary-white;
 }

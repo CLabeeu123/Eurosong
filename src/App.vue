@@ -1,26 +1,57 @@
 <template>
   <div id="app">
-    <nav class="c-nav">
-      <ul class="c-nav-list">
-        <li class="c-nav-list-item">Home</li>
-        <li class="c-nav-list-item">Contact</li>
-      </ul>
-    </nav>
-    <h1>Eurosong Festival</h1>
-    <div class="c-feedback-warning"></div>
-    <div class="warning">Er is een fout gebeurd</div>
+    <!-- Homepagina -->
+    <Homepage
+      v-if="page == 'home'"
 
-    <div class="error">Het is kapot</div>
-    <div class="succes">Het werkt</div>
+      @change-page="goToPage"
+    />
+
+    <!-- Game -->
+    <Gamepage
+      v-if="page == 'game'"
+
+      @change-page="goToPage"
+    />
+
+    <!-- Ranking -->
+    <!-- DOEN JULLIE ALS TAAK -->
+    <Rankingpage
+      v-if="page == 'ranking'"
+
+      @change-page="goToPage"
+    />
+
   </div>
 </template>
 
 <script>
-//Importing style
-import style from "./scss/style.scss";
+  // Pages
+  import Homepage from "./pages/Homepage.vue";
+  import Gamepage from "./pages/Gamepage.vue";
+  import Rankingpage from "./pages/Rankingpage.vue";
 
-export default {
-  name: "App",
-};
+  // App component
+  export default {
+    name: 'App',
+    components: {
+      Homepage,
+      Gamepage,
+      Rankingpage
+    },
+    data() {
+      return {
+        page: "game"
+      }
+    },
+    methods: {
+      goToPage(page) {
+        this.page = page;
+      }
+    }
+  }
 </script>
 
+<style lang="scss">
+  @import "./scss/style.scss";
+</style>

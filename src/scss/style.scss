@@ -1,29 +1,11 @@
-@import"./settings/colors.scss";
-@import"./settings/font-size.scss";
-@import"./components/body.scss";
-@import"./components/nav.scss";
+// Settings
+@import "./settings/colors.scss";
+@import "./settings/font-sizes.scss";
 
+// Components
+@import "./components/body.scss";
+@import "./components/feedback.scss";
+@import "./components/nav.scss";
 
-@mixin alert ($red,$green,$blue) {
-    background-color: rgba($red,$green,$blue,255,165,80,0.5);
-    margin-bottom: 20px;
-    border: 1px solid rgba($red,$green,$blue,255,165,80,1);
-    padding: 20px;
-    border-radius: 10px;
-
-}
-
-
-.warning{
-    @include alert(255,165,80);
-
-}
-
-.error{
-    @include alert(255,0,0);
-}
-
-.succes{
-    @include alert(0,255,0);
-
-}
+@import "./components/table.scss";
+  
